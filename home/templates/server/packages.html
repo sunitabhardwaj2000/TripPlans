@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - TripPlans</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">TripPlans</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#travelMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="travelMenu">
+            <div class="offcanvas-header">
+                <h5>TripPlans Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li><a class="nav-link" href="/">Home</a></li>
+                    <li><a class="nav-link" href="/about/">About</a></li>
+                    <li><a class="nav-link" href="/services/">Services</a></li>
+                    <li><a class="nav-link" href="/packages/">Packages</a></li>
+                    <li><a class="nav-link" href="/destination/">Destination</a></li>
+                    <li><a class="nav-link" href="/gallery/">Gallery</a></li>
+                    <li><a class="nav-link" href="/contact/">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="text-center text-white py-5" style="background:linear-gradient(120deg,#064e3b,#0d9488);">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold">Our Packages</h1>
+        <p class="lead">Choose your perfect holiday package</p>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Popular Tour Packages</h2>
+        <p class="text-muted">Explore amazing places with us</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="p-5 text-center text-white" style="background:#0d9488;">
+                    <h1>🏔️</h1>
+                    <h3>Manali Trip</h3>
+                </div>
+                <div class="card-body">
+                    <h4>₹8,999 / Person</h4>
+                    <p>Duration: 3 Days / 2 Nights</p>
+                    <p>Enjoy mountains, snowfall and beautiful nature.</p>
+                    <a href="/contact/" class="btn btn-warning">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="p-5 text-center text-white" style="background:#2563eb;">
+                    <h1>🏖️</h1>
+                    <h3>Goa Trip</h3>
+                </div>
+                <div class="card-body">
+                    <h4>₹12,999 / Person</h4>
+                    <p>Duration: 4 Days / 3 Nights</p>
+                    <p>Enjoy beaches, sunsets and exciting activities.</p>
+                    <a href="/contact/" class="btn btn-warning">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="p-5 text-center text-white" style="background:#d97706;">
+                    <h1>🏰</h1>
+                    <h3>Jaipur Trip</h3>
+                </div>
+                <div class="card-body">
+                    <h4>₹6,999 / Person</h4>
+                    <p>Duration: 2 Days / 1 Night</p>
+                    <p>Explore forts, palaces and royal culture.</p>
+                    <a href="/contact/" class="btn btn-warning">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">© 2026 TripPlans. All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

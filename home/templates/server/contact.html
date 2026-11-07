@@ -1,0 +1,128 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | TripPlans</title>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="contact-page">
+
+<nav class="navbar navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand fw-bold fs-3" href="/">TripPlans ✈</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="offcanvas" data-bs-target="#travelMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="travelMenu">
+<div class="offcanvas-header">
+<h5>TripPlans Menu</h5>
+<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+<ul class="navbar-nav">
+<li><a class="nav-link" href="/">Home</a></li>
+<li><a class="nav-link" href="/about/">About</a></li>
+<li><a class="nav-link" href="/services/">Services</a></li>
+<li><a class="nav-link" href="/packages/">Packages</a></li>
+<li><a class="nav-link" href="/destination/">Destination</a></li>
+<li><a class="nav-link" href="/gallery/">Gallery</a></li>
+<li><a class="nav-link" href="/contact/">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+
+<section class="contact-hero">
+<div class="container">
+<p class="contact-label">LET'S TALK ABOUT TRAVEL</p>
+<h1>Let's Make Your<br><span>Next Trip Amazing.</span></h1>
+<p>Have a question or planning your next adventure?<br>
+We are just one message away.</p>
+</div>
+</section>
+
+<section class="container contact-main">
+<div class="row g-0 contact-wrapper">
+
+<div class="col-lg-5 contact-info">
+<p class="contact-label">CONTACT INFORMATION</p>
+<h2>Get in touch<br>with us.</h2>
+<p class="info-description">We are here to help you plan a journey worth remembering.</p>
+
+<div class="info-item">
+<div class="info-icon">📍</div>
+<div><h5>Our Location</h5><p>Palwal, Haryana, India</p></div>
+</div>
+
+<div class="info-item">
+<div class="info-icon">✉️</div>
+<div><h5>Email Address</h5><p>info@tripplans.com</p></div>
+</div>
+
+<div class="info-item">
+<div class="info-icon">☎️</div>
+<div><h5>Phone Number</h5><p>+91 98765 43210</p></div>
+</div>
+
+<div class="contact-social">
+Follow your travel dreams ✈
+</div>
+</div>
+
+<div class="col-lg-7 contact-form-area">
+<p class="contact-label">SEND US A MESSAGE</p>
+<h2>Tell us what's on your mind.</h2>
+
+{% if success %}
+<div class="alert alert-success">{{ success }}</div>
+{% endif %}
+
+<form method="POST">
+{% csrf_token %}
+
+<div class="row">
+<div class="col-md-6 mb-3">
+<label>Your Name</label>
+<input type="text" name="name" class="form-control" placeholder="Your full name" required>
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Email Address</label>
+<input type="email" name="email" class="form-control" placeholder="Your email" required>
+</div>
+</div>
+
+<div class="mb-3">
+<label>Subject</label>
+<input type="text" name="subject" class="form-control" placeholder="How can we help?" required>
+</div>
+
+<div class="mb-4">
+<label>Your Message</label>
+<textarea name="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+</div>
+
+<button type="submit" class="send-btn">Send Message →</button>
+</form>
+</div>
+
+</div>
+</section>
+
+<footer class="contact-footer text-center">
+<p>© 2026 TripPlans | Travel More, Worry Less.</p>
+</footer>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

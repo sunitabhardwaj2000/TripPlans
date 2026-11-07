@@ -1,0 +1,132 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripPlans - Travel Website</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- Navbar -->
+
+        
+   
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">TripPlans</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#travelMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end bg-dark text-white"
+             tabindex="-1" id="travelMenu">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">TripPlans Menu</h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="offcanvas"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/packages/">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/destination/">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/gallery/">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+                    <li><a class="nav-link" href="/booking/">Booking</a></li>
+                    <li><a class="nav-link" href="/my-bookings/">My Bookings</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero-section text-center text-white d-flex align-items-center">
+    <div class="container">
+        <h5>EXPLORE THE WORLD</h5>
+        <h1 class="display-3 fw-bold">Find Your Perfect Trip</h1>
+        <p class="lead">Discover beautiful places and make unforgettable memories.</p>
+        <a href="/packages/" class="btn btn-warning btn-lg mt-3">
+            Explore Packages
+        </a>
+    </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="container text-center py-5">
+    <h2 class="fw-bold">Welcome to TripPlans</h2>
+    <p class="text-muted mt-3">
+        We help you discover amazing destinations and plan your perfect holiday.
+    </p>
+</section>
+
+<!-- Popular Destinations -->
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Popular Destinations</h2>
+        <p class="text-muted">Explore our most popular travel destinations</p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600"
+                     class="card-img-top" alt="Taj Mahal">
+                <div class="card-body text-center">
+                    <h4>Agra</h4>
+                    <p>Explore the beauty of Taj Mahal.</p>
+                    <a href="/destination/" class="btn btn-warning">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600"
+                     class="card-img-top" alt="Goa">
+                <div class="card-body text-center">
+                    <h4>Goa</h4>
+                    <p>Enjoy beautiful beaches and sunsets.</p>
+                    <a href="/destination/" class="btn btn-warning">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600"
+                     class="card-img-top" alt="Manali">
+                <div class="card-body text-center">
+                    <h4>Manali</h4>
+                    <p>Enjoy mountains and beautiful nature.</p>
+                    <a href="/destination/" class="btn btn-warning">Explore</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">© 2026 TripPlans. All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
